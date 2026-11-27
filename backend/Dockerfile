@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY backend/requirements.txt /app/backend-requirements.txt
 COPY ai-model/requirements.txt /app/ai-requirements.txt
 
-RUN pip install --no-cache-dir -r /app/backend-requirements.txt \
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch torchvision \
+    && pip install --no-cache-dir -r /app/backend-requirements.txt \
     && pip install --no-cache-dir -r /app/ai-requirements.txt
 
 # Copy source code
@@ -35,7 +36,7 @@ RUN mkdir -p uploads/raw uploads/inspections uploads/preprocessed uploads/report
 EXPOSE 8000
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
-  CMD curl -f http://localhost:8000/health || exit 1
+  CMD curl -f "http://localhost:${PORT:-8000}/health" || exit 1
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
 

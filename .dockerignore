@@ -1,0 +1,16 @@
+.git
+.github
+.vscode
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.mypy_cache
+**/.venv
+**/venv
+backend/uploads
+backend/infrascan.db
+frontend
+uploads
+ai-model/datasets
+ai-model/outputs
+*.db
