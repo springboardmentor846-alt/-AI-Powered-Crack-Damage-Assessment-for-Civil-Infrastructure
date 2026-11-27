@@ -2,7 +2,7 @@
 
 InfraScan is a web application that uses deep learning to detect and assess cracks and damage in civil infrastructure such as roads, bridges, and buildings. Inspectors upload images, the AI models analyse them, and the results are stored and managed through a role-based system.
 
-Built as part of the **Infosys Springboard AI/ML Internship** (Team 4).
+Built as an individual project during the **Infosys Springboard AI/ML Internship**.
 
 **Live demo:** https://infrascan-nine.vercel.app/
 
@@ -150,19 +150,12 @@ The frontend is deployed on **Vercel**, and the backend API is deployed as a Doc
 
 ---
 
-## Author & Team
+## Author
 
-**Submitted By (Branch Owner):**
-- **Pranali Ashish Tantak** — Frontend Development & UI Integration  
-  GitHub: [Pranaliii234](https://github.com/Pranaliii234)
+**Pranali Ashish Tantak**  
+GitHub: [Pranaliii234](https://github.com/Pranaliii234)
 
-**Team 4 Collaborators:**
-- **Anuj Yadav** — AI/ML Pipeline & Model Training
-- **Lakshmi** — Backend APIs & Database
-- **Poojitha** — Backend APIs & Database
-
-**Project Mentor:**
-- **Rohit Sir** ([springboardmentor846-alt](https://github.com/springboardmentor846-alt))
+Designed and built the complete project: AI models, backend, frontend, and deployment.
 
 ---
 
